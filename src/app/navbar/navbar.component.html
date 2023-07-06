@@ -1,8 +1,32 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <button type="button" mat-raised-button color="black"> تسجيل الدخول</button>
-        <li class="d-flex dropdown" *ngIf="logedIn">
+      <a class="navbar-brand" aria-current="page" routerLink="home"><img src="assets/imgs/logo.PNG"></a>
+      <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+        <ul class="navbar-nav  mb-2 mb-lg-0 col-8">
+          
+          <li class="nav-item">
+            <a class="nav-link" routerLink="instructors">المستشارين</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="fields">التخصصات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="programs">البرامج</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="aboutUs">عنا</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="connectUs">تواصل معنا</a>
+          </li>
+        </ul>
+        <form class="col-2 d-flex">
+          <div class="input-group rounded">
+            <input  class="form-control icon" placeholder="ابحث عن البرامج والمسشارين" />
+          </div>
+        </form>
+        <button type="button" mat-fab extended class="btn dark " routerLink="login"> <a>تسجيل الدخول</a></button>
+        <li class="d-flex dropdown col-2" *ngIf="logedIn">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -11,23 +35,12 @@
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
-          </li>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-       
-        <ul class="navbar-nav  mb-2 mb-lg-0">
-           
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['instructors']">المستشارين</a>
-            </li>
-       
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
+        </li>
+        <button mat-mini-fab class="cart col-2 me-2">
+          <div class="no-cart"></div>
+          <!-- <mat-icon>shopping_cart</mat-icon> -->
+          <!-- <mat-icon style="background-color: #fff;">radio_button_unchecked</mat-icon> -->
+        </button>       
       </div>
-      <a class="navbar-brand" aria-current="page" [routerLink]="['home']"><img src="assets/imgs/logo.PNG"></a>
     </div>
   </nav>

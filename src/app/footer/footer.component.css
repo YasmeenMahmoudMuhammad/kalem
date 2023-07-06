@@ -1,0 +1,12 @@
+.footer1{
+    background-color: #ACB700;
+}
+.footer2{
+    background-color: #3D3F3F;
+}
+footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+}

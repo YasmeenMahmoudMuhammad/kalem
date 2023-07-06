@@ -11,6 +11,7 @@ import { ProgramsComponent } from './programs/programs.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ConnectWithUsComponent } from './connect-with-us/connect-with-us.component';
 import { MyProgramsComponent } from './my-programs/my-programs.component';
+import { SignUpComponent } from './logIn/sign-up/sign-up.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'home' ,pathMatch:'full'},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:'aboutUs' , component:AboutUsComponent},
   {path:'connectUs' , component:ConnectWithUsComponent},
   {path:'cart' , component:MyProgramsComponent},
+  {path:'login' , component:SignUpComponent},
 
 
 
